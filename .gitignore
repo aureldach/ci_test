@@ -1,0 +1,7 @@
+.idea
+*.iml
+dist
+node_modules
+typings
+app/**/*.js*
+test/**/*.js*

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CI-APP</title>
+
+    <!-- build:js scripts/shim.js -->
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/es6-shim/es6-shim.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/blueimp-canvas-to-blob/js/canvas-to-blob.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/app.js -->
+    <!-- inject:js -->
+    <!-- js app file will be inserted here -->
+    <!-- endinject -->
+    <!-- build:js scripts/lib.js -->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/pica/dist/pica.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:css css/lib.css -->
+    <link href="node_modules/ng2-toastr/bundles/ng2-toastr.min.css" rel="stylesheet" />
+    <!-- endbuild -->
+
+    <!-- semantic-ui css and js files -->
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <script src="semantic/dist/semantic.min.js"></script>
+</head>
+
+<body>
+    <ci-app>
+        <div class="ui active inverted dimmer">
+            <div class="ui text large loader">Loading</div>
+        </div>
+    </ci-app>
+
+    <script>
+        System.config({
+            defaultJSExtensions: true
+        });
+    </script>
+
+    <!-- build:remove -->
+    <script src="systemjs.config.js"></script>
+    <!-- endbuild -->
+
+    <script>
+        System.import('app/boot').then(null, console.error.bind(console));
+</script>
+</body>
+
+</html>
