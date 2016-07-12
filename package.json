@@ -5,10 +5,6 @@
   "main": "boot.js",
   "scripts": {
     "postinstall": "npm run typings install",
-    "tsc": "tsc",
-    "tsc:w": "tsc -w",
-    "lite": "lite-server",
-    "start": "concurrent \"npm run tsc:w\" \"npm run lite\" ",
     "typings": "typings"
   },
   "author": "Tomas Paudits",
@@ -39,14 +35,14 @@
     "karma-phantomjs-launcher": "~1.0.1",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "0.0.26",
-    "lite-server": "^1.3.2",
     "phantomjs-prebuilt": "^2.1.7",
     "run-sequence": "^1.1.5",
     "superstatic": "^1.2.3",
     "systemjs-builder": "^0.15.23",
     "tslint": "^3.2.2",
     "typescript": "^1.8.10",
-    "require-dir": "^0.3.0"
+    "require-dir": "^0.3.0",
+    "typings": "^1.3.1"
   },
   "dependencies": {
     "@angular/common": "^2.0.0-rc.3",
